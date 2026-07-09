@@ -1,0 +1,70 @@
+{
+  "run_name": "baseline_v1",
+  "started_at": "2026-07-08T17:54:33.562899+00:00",
+  "completed_at": "2026-07-08T17:54:47.130424+00:00",
+  "duration_seconds": 13.566931128996657,
+  "duration_human": "13s",
+  "seed": 42,
+  "config_path": "/Users/tobiloba/Documents/warehouse_nav/configs/ppo_config.yaml",
+  "config_snapshot_path": "/Users/tobiloba/Documents/warehouse_nav/results/runs/baseline_v1/config_snapshot.yaml",
+  "model_path": "/Users/tobiloba/Documents/warehouse_nav/results/models/baseline_v1.zip",
+  "monitor_path": "/Users/tobiloba/Documents/warehouse_nav/results/runs/baseline_v1/logs/monitor.csv",
+  "logs_dir": "/Users/tobiloba/Documents/warehouse_nav/results/runs/baseline_v1/logs",
+  "training_summary_path": "/Users/tobiloba/Documents/warehouse_nav/results/runs/baseline_v1/training_summary.json",
+  "evaluation_path": "/Users/tobiloba/Documents/warehouse_nav/results/runs/baseline_v1/evaluation.json",
+  "effective_config": {
+    "env": {
+      "width": 10,
+      "height": 10,
+      "max_steps": 80,
+      "start_pos": [
+        1,
+        5
+      ],
+      "start_heading": 1,
+      "target_pos": [
+        8,
+        5
+      ]
+    },
+    "reward": {
+      "target": 10.0,
+      "collision": -0.5,
+      "blocked_forward": -0.2,
+      "failed_jump": -0.3,
+      "step_penalty": -0.01
+    },
+    "ppo": {
+      "policy": "MlpPolicy",
+      "total_timesteps": 10000,
+      "learning_rate": 0.0003,
+      "n_steps": 1024,
+      "batch_size": 64,
+      "gamma": 0.99
+    },
+    "eval": {
+      "episodes": 20,
+      "deterministic": true
+    },
+    "run": {
+      "run_name": "baseline_v1",
+      "seed": 42,
+      "tensorboard_enabled": false
+    }
+  },
+  "training_summary": {
+    "episode_count": 235,
+    "mean_episode_reward": 6.378140778723404,
+    "mean_episode_length": 43.297872340425535,
+    "best_episode_reward": 16.94,
+    "worst_episode_reward": -14.815773,
+    "final_10_mean_reward": 16.118000000000002,
+    "final_10_mean_length": 10.2,
+    "run_name": "baseline_v1",
+    "timesteps_requested": 10000,
+    "duration_seconds": 13.566931128996657,
+    "duration_human": "13s",
+    "started_at": "2026-07-08T17:54:33.562899+00:00",
+    "completed_at": "2026-07-08T17:54:47.130424+00:00"
+  }
+}
