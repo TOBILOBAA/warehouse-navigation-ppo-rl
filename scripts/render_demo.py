@@ -19,8 +19,10 @@ if str(PROJECT_ROOT) not in sys.path:
 
 os.environ.setdefault("MPLCONFIGDIR", str(PROJECT_ROOT / ".mplconfig"))
 
+import numpy as np
 from stable_baselines3 import PPO
 
+from env.warehouse_navigation_env import ACTION_NAMES
 from scripts.train_ppo import build_env_from_config, load_config
 
 
@@ -56,12 +58,29 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Sample actions stochastically instead of using deterministic policy output.",
     )
+    parser.add_argument(
+        "--show-policy-details",
+        action="store_true",
+        help="Print action probabilities and the chosen action at each frame.",
+    )
+    parser.add_argument(
+        "--show-observation",
+        action="store_true",
+        help="Print the numeric observation vector at each frame.",
+    )
     return parser.parse_args()
 
 
 def clear_terminal() -> None:
     """Clear the terminal between frames for a simple animation effect."""
     print("\033[2J\033[H", end="")
+
+
+def get_action_probabilities(model: PPO, observation: np.ndarray) -> np.ndarray:
+    """Return PPO's current action probabilities for a single observation."""
+    obs_tensor, _ = model.policy.obs_to_tensor(observation)
+    distribution = model.policy.get_distribution(obs_tensor)
+    return distribution.distribution.probs.detach().cpu().numpy()[0]
 
 
 def main() -> None:
@@ -78,6 +97,9 @@ def main() -> None:
         truncated = False
         total_reward = 0.0
         frame_index = 0
+        last_action_name = None
+        last_reward = None
+        last_info = None
 
         while not done and not truncated:
             clear_terminal()
@@ -86,10 +108,36 @@ def main() -> None:
             print(env.render())
             print(f"total_reward={total_reward:.3f}")
             print(f"deterministic={deterministic}")
+            if args.show_observation:
+                print(f"observation={np.array2string(observation, precision=3)}")
+            if last_action_name is not None:
+                print(f"last_action={last_action_name} last_reward={last_reward:.3f}")
+                print(
+                    "last_events="
+                    f"success={last_info['success']} "
+                    f"collision={last_info['collision']} "
+                    f"blocked={last_info['blocked']} "
+                    f"failed_jump={last_info['failed_jump']}"
+                )
+
+            action_probabilities = None
+            if args.show_policy_details:
+                action_probabilities = get_action_probabilities(model, observation)
+                formatted_probs = ", ".join(
+                    f"{ACTION_NAMES[action_index]}={probability:.3f}"
+                    for action_index, probability in enumerate(action_probabilities)
+                )
+                print(f"policy_probs: {formatted_probs}")
 
             action, _state = model.predict(observation, deterministic=deterministic)
+            action_name = ACTION_NAMES[int(action)]
+            if args.show_policy_details:
+                print(f"chosen_action={action_name}")
             observation, reward, done, truncated, info = env.step(int(action))
             total_reward += reward
+            last_action_name = action_name
+            last_reward = reward
+            last_info = info
             frame_index += 1
             time.sleep(args.delay)
 
