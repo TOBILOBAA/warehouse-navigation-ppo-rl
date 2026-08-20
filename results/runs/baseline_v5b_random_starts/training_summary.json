@@ -1,0 +1,15 @@
+{
+  "episode_count": 7548,
+  "mean_episode_reward": 20.657493492183356,
+  "mean_episode_length": 16.00264970853206,
+  "best_episode_reward": 21.261754,
+  "worst_episode_reward": -52.001754,
+  "final_10_mean_reward": 16.100877,
+  "final_10_mean_length": 20.0,
+  "run_name": "baseline_v5b_random_starts",
+  "timesteps_requested": 120000,
+  "duration_seconds": 152.84738957096124,
+  "duration_human": "2m 32s",
+  "started_at": "2026-08-20T01:43:53.242573+00:00",
+  "completed_at": "2026-08-20T01:46:26.087598+00:00"
+}

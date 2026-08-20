@@ -1,0 +1,105 @@
+{
+  "run_name": "baseline_v5d_balanced_routes",
+  "started_at": "2026-08-20T02:51:34.296910+00:00",
+  "completed_at": "2026-08-20T02:54:02.292505+00:00",
+  "duration_seconds": 147.99342494696612,
+  "duration_human": "2m 27s",
+  "seed": 42,
+  "config_path": "configs/ppo_config_v5d_balanced_routes.yaml",
+  "config_snapshot_path": "/Users/tobiloba/Documents/warehouse_nav/results/runs/baseline_v5d_balanced_routes/config_snapshot.yaml",
+  "model_path": "/Users/tobiloba/Documents/warehouse_nav/results/models/baseline_v5d_balanced_routes.zip",
+  "monitor_path": "/Users/tobiloba/Documents/warehouse_nav/results/runs/baseline_v5d_balanced_routes/logs/monitor.csv",
+  "logs_dir": "/Users/tobiloba/Documents/warehouse_nav/results/runs/baseline_v5d_balanced_routes/logs",
+  "training_summary_path": "/Users/tobiloba/Documents/warehouse_nav/results/runs/baseline_v5d_balanced_routes/training_summary.json",
+  "deterministic_evaluation_path": "/Users/tobiloba/Documents/warehouse_nav/results/runs/baseline_v5d_balanced_routes/evaluation_deterministic.json",
+  "stochastic_evaluation_path": "/Users/tobiloba/Documents/warehouse_nav/results/runs/baseline_v5d_balanced_routes/evaluation_stochastic.json",
+  "effective_config": {
+    "env": {
+      "width": 16,
+      "height": 12,
+      "max_steps": 180,
+      "start_pos": [
+        1,
+        6
+      ],
+      "start_heading": 1,
+      "target_pos": [
+        14,
+        6
+      ],
+      "grid_rows": [
+        ". . . . . . . . . . . . . . . .",
+        ". . # # . . . . . . . . # # . .",
+        ". . # . . . # # # . . . . # . .",
+        ". . . . . . . . . . . . . . . .",
+        ". . . # # . . o . . . # # . . .",
+        ". . . . # . . # . . . # . . . .",
+        ". S . . # . . # . . . # . . T .",
+        ". . . . # . . # . . . # . . . .",
+        ". . . # # . . o . . . # # . . .",
+        ". . . . . . . . . . . . . . . .",
+        ". . # . . . # # # . . . . # . .",
+        ". . # # . . . . . . . . # # . ."
+      ]
+    },
+    "reward": {
+      "target": 10.0,
+      "collision": -0.5,
+      "blocked_forward": -0.2,
+      "failed_jump": -1.0,
+      "step_penalty": -0.01
+    },
+    "ppo": {
+      "policy": "MlpPolicy",
+      "total_timesteps": 120000,
+      "learning_rate": 0.0003,
+      "n_steps": 1024,
+      "batch_size": 64,
+      "gamma": 0.99
+    },
+    "eval": {
+      "episodes": 20,
+      "deterministic": true
+    },
+    "run": {
+      "run_name": "baseline_v5d_balanced_routes",
+      "seed": 42,
+      "tensorboard_enabled": false
+    }
+  },
+  "training_summary": {
+    "episode_count": 3903,
+    "mean_episode_reward": 21.586275960543173,
+    "mean_episode_length": 30.953881629515756,
+    "best_episode_reward": 22.78,
+    "worst_episode_reward": -62.0,
+    "final_10_mean_reward": 22.72,
+    "final_10_mean_length": 28.0,
+    "run_name": "baseline_v5d_balanced_routes",
+    "timesteps_requested": 120000,
+    "duration_seconds": 147.99342494696612,
+    "duration_human": "2m 27s",
+    "started_at": "2026-08-20T02:51:34.296910+00:00",
+    "completed_at": "2026-08-20T02:54:02.292505+00:00"
+  },
+  "deterministic_evaluation_summary": {
+    "episodes": 20,
+    "success_rate": 0.0,
+    "average_episode_reward": 4.491796067500666,
+    "average_steps_per_successful_episode": null,
+    "collision_rate": 0.0,
+    "average_jumps_per_episode": 0.0,
+    "timeout_rate": 1.0,
+    "stuck_rate": 1.0
+  },
+  "stochastic_evaluation_summary": {
+    "episodes": 20,
+    "success_rate": 0.9,
+    "average_episode_reward": 20.533549024320372,
+    "average_steps_per_successful_episode": 70.16666666666667,
+    "collision_rate": 0.0,
+    "average_jumps_per_episode": 0.15,
+    "timeout_rate": 0.1,
+    "stuck_rate": 0.1
+  }
+}

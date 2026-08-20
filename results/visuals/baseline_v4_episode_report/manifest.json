@@ -1,0 +1,642 @@
+[
+  {
+    "episode": 1,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v4_episode_report/episode_001",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 19,
+      "steps": 18,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.82,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 19,
+      "steps": 18,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.82,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    }
+  },
+  {
+    "episode": 2,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v4_episode_report/episode_002",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 19,
+      "steps": 18,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.82,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 25,
+      "steps": 24,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.76,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    }
+  },
+  {
+    "episode": 3,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v4_episode_report/episode_003",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 19,
+      "steps": 18,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.82,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 19,
+      "steps": 18,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.82,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    }
+  },
+  {
+    "episode": 4,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v4_episode_report/episode_004",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 19,
+      "steps": 18,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.82,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 19,
+      "steps": 18,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.82,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    }
+  },
+  {
+    "episode": 5,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v4_episode_report/episode_005",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 19,
+      "steps": 18,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.82,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 21,
+      "steps": 20,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.8,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    }
+  },
+  {
+    "episode": 6,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v4_episode_report/episode_006",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 19,
+      "steps": 18,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.82,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 19,
+      "steps": 18,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.82,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    }
+  },
+  {
+    "episode": 7,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v4_episode_report/episode_007",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 19,
+      "steps": 18,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.82,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 19,
+      "steps": 18,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.82,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    }
+  },
+  {
+    "episode": 8,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v4_episode_report/episode_008",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 19,
+      "steps": 18,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.82,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 19,
+      "steps": 18,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.82,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    }
+  },
+  {
+    "episode": 9,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v4_episode_report/episode_009",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 19,
+      "steps": 18,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.82,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 19,
+      "steps": 18,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.82,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    }
+  },
+  {
+    "episode": 10,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v4_episode_report/episode_010",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 19,
+      "steps": 18,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.82,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 19,
+      "steps": 18,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.82,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    }
+  },
+  {
+    "episode": 11,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v4_episode_report/episode_011",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 19,
+      "steps": 18,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.82,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 31,
+      "steps": 30,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.7,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    }
+  },
+  {
+    "episode": 12,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v4_episode_report/episode_012",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 19,
+      "steps": 18,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.82,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 19,
+      "steps": 18,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.82,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    }
+  },
+  {
+    "episode": 13,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v4_episode_report/episode_013",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 19,
+      "steps": 18,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.82,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 27,
+      "steps": 26,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.74,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    }
+  },
+  {
+    "episode": 14,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v4_episode_report/episode_014",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 19,
+      "steps": 18,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.82,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 27,
+      "steps": 26,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.74,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    }
+  },
+  {
+    "episode": 15,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v4_episode_report/episode_015",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 19,
+      "steps": 18,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.82,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 19,
+      "steps": 18,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.82,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    }
+  },
+  {
+    "episode": 16,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v4_episode_report/episode_016",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 19,
+      "steps": 18,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.82,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 23,
+      "steps": 22,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.78,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    }
+  },
+  {
+    "episode": 17,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v4_episode_report/episode_017",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 19,
+      "steps": 18,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.82,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 19,
+      "steps": 18,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.82,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    }
+  },
+  {
+    "episode": 18,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v4_episode_report/episode_018",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 19,
+      "steps": 18,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.82,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 19,
+      "steps": 18,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.82,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    }
+  },
+  {
+    "episode": 19,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v4_episode_report/episode_019",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 19,
+      "steps": 18,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.82,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 23,
+      "steps": 22,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.78,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    }
+  },
+  {
+    "episode": 20,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v4_episode_report/episode_020",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 19,
+      "steps": 18,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.82,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 19,
+      "steps": 18,
+      "success": true,
+      "final_position": [
+        10,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 18.82,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    }
+  }
+]

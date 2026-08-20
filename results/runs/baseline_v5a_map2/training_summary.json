@@ -1,0 +1,15 @@
+{
+  "episode_count": 8596,
+  "mean_episode_reward": 20.4981775746859,
+  "mean_episode_length": 10.48278268962308,
+  "best_episode_reward": 20.91,
+  "worst_episode_reward": -51.769317,
+  "final_10_mean_reward": 20.91,
+  "final_10_mean_length": 9.0,
+  "run_name": "baseline_v5a_map2",
+  "timesteps_requested": 90000,
+  "duration_seconds": 270.56313475599745,
+  "duration_human": "4m 30s",
+  "started_at": "2026-08-20T01:22:16.074162+00:00",
+  "completed_at": "2026-08-20T01:26:46.633200+00:00"
+}

@@ -120,6 +120,21 @@ class WarehouseNavigationEnvSanityTests(unittest.TestCase):
         self.assertNotEqual(observation_before[7], observation_after[7])  # front sensor changed
         self.assertEqual(info["heading"], "north")
 
+    def test_repeated_turning_in_place_triggers_stagnation_penalty(self) -> None:
+        env = WarehouseNavigationEnv(stagnation_grace_steps=2)
+        env.reset()
+
+        _, reward_1, _, _, info_1 = env.step(1)
+        _, reward_2, _, _, info_2 = env.step(2)
+        _, reward_3, _, _, info_3 = env.step(1)
+
+        self.assertAlmostEqual(reward_1, -0.01, places=6)
+        self.assertAlmostEqual(reward_2, -0.01, places=6)
+        self.assertAlmostEqual(reward_3, -0.06, places=6)
+        self.assertEqual(info_1["stagnation_steps"], 1)
+        self.assertEqual(info_2["stagnation_steps"], 2)
+        self.assertEqual(info_3["stagnation_steps"], 3)
+
     def test_episode_truncates_when_max_steps_is_reached(self) -> None:
         env = WarehouseNavigationEnv(max_steps=1)
         env.reset()

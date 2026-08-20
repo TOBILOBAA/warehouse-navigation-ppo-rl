@@ -252,6 +252,17 @@ This is the first full RL loop: observation -> action -> reward -> policy update
 Deliverable:
 A baseline PPO model that shows measurable improvement over time.
 
+Current status:
+
+- `baseline_v3` became our reliable simple-grid baseline
+- `baseline_v4` proved that stronger deterministic behavior survived a harder fixed map
+- `baseline_v5a_map1` and `baseline_v5a_map2` both reached perfect deterministic and stochastic evaluation on richer fixed layouts
+- those `v5a` runs also taught us an important lesson:
+  the policy stayed strong, but it collapsed onto one very confident route instead of showing broad route diversity
+
+This means the next phase is no longer "can PPO solve a richer fixed map?"
+It is "can the policy still navigate well when the episode layout changes enough to punish memorization?"
+
 ### Step 9. Evaluate behavior, not just reward
 
 Goal:
@@ -270,6 +281,39 @@ A rising reward curve can still hide bad behavior. We want real navigation impro
 
 Deliverable:
 An evaluation script and a short metrics summary.
+
+Current status:
+
+- evaluation already includes deterministic and stochastic rollouts
+- visual episode reports are part of the inspection workflow
+- `v5a` showed stable success, but also revealed that stable success is not the same thing as flexible navigation
+
+So the next evaluation questions are:
+
+- does randomized start position break the learned behavior?
+- does randomized target position break the learned behavior?
+- if we redesign the map so the jump shortcut is not obviously best, does the policy still behave intelligently?
+
+We will track those questions as:
+
+- `v5b`: randomize starts while keeping the target fixed
+- `v5c`: randomize targets while keeping the start fixed
+- `v5d`: keep fixed endpoints, but redesign the map so jump is useful without being automatically dominant
+- `v5e`: add an anti-stagnation reward penalty so the policy is discouraged from spinning in place when route choice gets hard
+- `v5f`: combine randomized targets with the anti-stagnation penalty to test whether the fix transfers to a harder generalization setting
+
+Latest status:
+
+- `v5b` stayed strong in both deterministic and stochastic evaluation
+- `v5c` exposed a major deterministic weakness:
+  the policy could often solve the task stochastically, but deterministic rollouts frequently timed out
+- `v5d` exposed the failure mode even more clearly:
+  deterministic behavior collapsed into repeated left-right turning loops at one cell
+- `v5e` targeted that exact issue with a focused anti-stagnation penalty
+- `baseline_v5e_anti_loop` recovered clean deterministic behavior on the hard balanced-routes map:
+  deterministic success rate `1.0`, timeout rate `0.0`, stuck rate `0.0`
+- `v5f` confirmed that the same focused fix transfers back to randomized targets:
+  deterministic success rate `1.0`, stochastic success rate `1.0`, timeout rate `0.0`, stuck rate `0.0`
 
 ### Step 10. Scale from grid to continuous navigation and document the system
 

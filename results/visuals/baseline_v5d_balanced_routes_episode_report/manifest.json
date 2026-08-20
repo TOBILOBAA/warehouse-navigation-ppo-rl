@@ -1,0 +1,642 @@
+[
+  {
+    "episode": 1,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v5d_balanced_routes_episode_report/episode_001",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 181,
+      "steps": 180,
+      "success": false,
+      "final_position": [
+        8,
+        9
+      ],
+      "final_heading": "east",
+      "total_reward": 4.491796067500631,
+      "jump_count": 0,
+      "distance_to_target": 6.708203932499369
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 66,
+      "steps": 65,
+      "success": true,
+      "final_position": [
+        14,
+        6
+      ],
+      "final_heading": "east",
+      "total_reward": 22.35,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    }
+  },
+  {
+    "episode": 2,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v5d_balanced_routes_episode_report/episode_002",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 181,
+      "steps": 180,
+      "success": false,
+      "final_position": [
+        8,
+        9
+      ],
+      "final_heading": "east",
+      "total_reward": 4.491796067500631,
+      "jump_count": 0,
+      "distance_to_target": 6.708203932499369
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 79,
+      "steps": 78,
+      "success": true,
+      "final_position": [
+        14,
+        6
+      ],
+      "final_heading": "east",
+      "total_reward": 21.22,
+      "jump_count": 1,
+      "distance_to_target": 0.0
+    }
+  },
+  {
+    "episode": 3,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v5d_balanced_routes_episode_report/episode_003",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 181,
+      "steps": 180,
+      "success": false,
+      "final_position": [
+        8,
+        9
+      ],
+      "final_heading": "east",
+      "total_reward": 4.491796067500631,
+      "jump_count": 0,
+      "distance_to_target": 6.708203932499369
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 78,
+      "steps": 77,
+      "success": true,
+      "final_position": [
+        14,
+        6
+      ],
+      "final_heading": "east",
+      "total_reward": 22.23,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    }
+  },
+  {
+    "episode": 4,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v5d_balanced_routes_episode_report/episode_004",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 181,
+      "steps": 180,
+      "success": false,
+      "final_position": [
+        8,
+        9
+      ],
+      "final_heading": "east",
+      "total_reward": 4.491796067500631,
+      "jump_count": 0,
+      "distance_to_target": 6.708203932499369
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 28,
+      "steps": 27,
+      "success": true,
+      "final_position": [
+        14,
+        6
+      ],
+      "final_heading": "east",
+      "total_reward": 22.73,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    }
+  },
+  {
+    "episode": 5,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v5d_balanced_routes_episode_report/episode_005",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 181,
+      "steps": 180,
+      "success": false,
+      "final_position": [
+        8,
+        9
+      ],
+      "final_heading": "east",
+      "total_reward": 4.491796067500631,
+      "jump_count": 0,
+      "distance_to_target": 6.708203932499369
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 78,
+      "steps": 77,
+      "success": true,
+      "final_position": [
+        14,
+        6
+      ],
+      "final_heading": "east",
+      "total_reward": 22.23,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    }
+  },
+  {
+    "episode": 6,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v5d_balanced_routes_episode_report/episode_006",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 181,
+      "steps": 180,
+      "success": false,
+      "final_position": [
+        8,
+        9
+      ],
+      "final_heading": "east",
+      "total_reward": 4.491796067500631,
+      "jump_count": 0,
+      "distance_to_target": 6.708203932499369
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 126,
+      "steps": 125,
+      "success": true,
+      "final_position": [
+        14,
+        6
+      ],
+      "final_heading": "east",
+      "total_reward": 21.75,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    }
+  },
+  {
+    "episode": 7,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v5d_balanced_routes_episode_report/episode_007",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 181,
+      "steps": 180,
+      "success": false,
+      "final_position": [
+        8,
+        9
+      ],
+      "final_heading": "east",
+      "total_reward": 4.491796067500631,
+      "jump_count": 0,
+      "distance_to_target": 6.708203932499369
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 181,
+      "steps": 180,
+      "success": false,
+      "final_position": [
+        9,
+        7
+      ],
+      "final_heading": "south",
+      "total_reward": 6.100980486407216,
+      "jump_count": 0,
+      "distance_to_target": 5.0990195135927845
+    }
+  },
+  {
+    "episode": 8,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v5d_balanced_routes_episode_report/episode_008",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 181,
+      "steps": 180,
+      "success": false,
+      "final_position": [
+        8,
+        9
+      ],
+      "final_heading": "east",
+      "total_reward": 4.491796067500631,
+      "jump_count": 0,
+      "distance_to_target": 6.708203932499369
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 174,
+      "steps": 173,
+      "success": true,
+      "final_position": [
+        14,
+        6
+      ],
+      "final_heading": "east",
+      "total_reward": 21.27,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    }
+  },
+  {
+    "episode": 9,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v5d_balanced_routes_episode_report/episode_009",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 181,
+      "steps": 180,
+      "success": false,
+      "final_position": [
+        8,
+        9
+      ],
+      "final_heading": "east",
+      "total_reward": 4.491796067500631,
+      "jump_count": 0,
+      "distance_to_target": 6.708203932499369
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 52,
+      "steps": 51,
+      "success": true,
+      "final_position": [
+        14,
+        6
+      ],
+      "final_heading": "east",
+      "total_reward": 22.49,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    }
+  },
+  {
+    "episode": 10,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v5d_balanced_routes_episode_report/episode_010",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 181,
+      "steps": 180,
+      "success": false,
+      "final_position": [
+        8,
+        9
+      ],
+      "final_heading": "east",
+      "total_reward": 4.491796067500631,
+      "jump_count": 0,
+      "distance_to_target": 6.708203932499369
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 93,
+      "steps": 92,
+      "success": true,
+      "final_position": [
+        14,
+        6
+      ],
+      "final_heading": "east",
+      "total_reward": 21.08,
+      "jump_count": 1,
+      "distance_to_target": 0.0
+    }
+  },
+  {
+    "episode": 11,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v5d_balanced_routes_episode_report/episode_011",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 181,
+      "steps": 180,
+      "success": false,
+      "final_position": [
+        8,
+        9
+      ],
+      "final_heading": "east",
+      "total_reward": 4.491796067500631,
+      "jump_count": 0,
+      "distance_to_target": 6.708203932499369
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 60,
+      "steps": 59,
+      "success": true,
+      "final_position": [
+        14,
+        6
+      ],
+      "final_heading": "east",
+      "total_reward": 22.41,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    }
+  },
+  {
+    "episode": 12,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v5d_balanced_routes_episode_report/episode_012",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 181,
+      "steps": 180,
+      "success": false,
+      "final_position": [
+        8,
+        9
+      ],
+      "final_heading": "east",
+      "total_reward": 4.491796067500631,
+      "jump_count": 0,
+      "distance_to_target": 6.708203932499369
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 36,
+      "steps": 35,
+      "success": true,
+      "final_position": [
+        14,
+        6
+      ],
+      "final_heading": "east",
+      "total_reward": 22.65,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    }
+  },
+  {
+    "episode": 13,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v5d_balanced_routes_episode_report/episode_013",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 181,
+      "steps": 180,
+      "success": false,
+      "final_position": [
+        8,
+        9
+      ],
+      "final_heading": "east",
+      "total_reward": 4.491796067500631,
+      "jump_count": 0,
+      "distance_to_target": 6.708203932499369
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 33,
+      "steps": 32,
+      "success": true,
+      "final_position": [
+        14,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 22.68,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    }
+  },
+  {
+    "episode": 14,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v5d_balanced_routes_episode_report/episode_014",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 181,
+      "steps": 180,
+      "success": false,
+      "final_position": [
+        8,
+        9
+      ],
+      "final_heading": "east",
+      "total_reward": 4.491796067500631,
+      "jump_count": 0,
+      "distance_to_target": 6.708203932499369
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 38,
+      "steps": 37,
+      "success": true,
+      "final_position": [
+        14,
+        6
+      ],
+      "final_heading": "east",
+      "total_reward": 22.63,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    }
+  },
+  {
+    "episode": 15,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v5d_balanced_routes_episode_report/episode_015",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 181,
+      "steps": 180,
+      "success": false,
+      "final_position": [
+        8,
+        9
+      ],
+      "final_heading": "east",
+      "total_reward": 4.491796067500631,
+      "jump_count": 0,
+      "distance_to_target": 6.708203932499369
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 44,
+      "steps": 43,
+      "success": true,
+      "final_position": [
+        14,
+        6
+      ],
+      "final_heading": "east",
+      "total_reward": 22.57,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    }
+  },
+  {
+    "episode": 16,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v5d_balanced_routes_episode_report/episode_016",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 181,
+      "steps": 180,
+      "success": false,
+      "final_position": [
+        8,
+        9
+      ],
+      "final_heading": "east",
+      "total_reward": 4.491796067500631,
+      "jump_count": 0,
+      "distance_to_target": 6.708203932499369
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 35,
+      "steps": 34,
+      "success": true,
+      "final_position": [
+        14,
+        6
+      ],
+      "final_heading": "north",
+      "total_reward": 22.66,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    }
+  },
+  {
+    "episode": 17,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v5d_balanced_routes_episode_report/episode_017",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 181,
+      "steps": 180,
+      "success": false,
+      "final_position": [
+        8,
+        9
+      ],
+      "final_heading": "east",
+      "total_reward": 4.491796067500631,
+      "jump_count": 0,
+      "distance_to_target": 6.708203932499369
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 181,
+      "steps": 180,
+      "success": false,
+      "final_position": [
+        11,
+        10
+      ],
+      "final_heading": "east",
+      "total_reward": 6.2,
+      "jump_count": 0,
+      "distance_to_target": 5.0
+    }
+  },
+  {
+    "episode": 18,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v5d_balanced_routes_episode_report/episode_018",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 181,
+      "steps": 180,
+      "success": false,
+      "final_position": [
+        8,
+        9
+      ],
+      "final_heading": "east",
+      "total_reward": 4.491796067500631,
+      "jump_count": 0,
+      "distance_to_target": 6.708203932499369
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 34,
+      "steps": 33,
+      "success": true,
+      "final_position": [
+        14,
+        6
+      ],
+      "final_heading": "east",
+      "total_reward": 22.67,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    }
+  },
+  {
+    "episode": 19,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v5d_balanced_routes_episode_report/episode_019",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 181,
+      "steps": 180,
+      "success": false,
+      "final_position": [
+        8,
+        9
+      ],
+      "final_heading": "east",
+      "total_reward": 4.491796067500631,
+      "jump_count": 0,
+      "distance_to_target": 6.708203932499369
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 104,
+      "steps": 103,
+      "success": true,
+      "final_position": [
+        14,
+        6
+      ],
+      "final_heading": "east",
+      "total_reward": 21.97,
+      "jump_count": 0,
+      "distance_to_target": 0.0
+    }
+  },
+  {
+    "episode": 20,
+    "folder": "/Users/tobiloba/Documents/warehouse_nav/results/visuals/baseline_v5d_balanced_routes_episode_report/episode_020",
+    "deterministic": {
+      "mode": "deterministic",
+      "frame_count": 181,
+      "steps": 180,
+      "success": false,
+      "final_position": [
+        8,
+        9
+      ],
+      "final_heading": "east",
+      "total_reward": 4.491796067500631,
+      "jump_count": 0,
+      "distance_to_target": 6.708203932499369
+    },
+    "stochastic": {
+      "mode": "stochastic",
+      "frame_count": 123,
+      "steps": 122,
+      "success": true,
+      "final_position": [
+        14,
+        6
+      ],
+      "final_heading": "east",
+      "total_reward": 20.78,
+      "jump_count": 1,
+      "distance_to_target": 0.0
+    }
+  }
+]

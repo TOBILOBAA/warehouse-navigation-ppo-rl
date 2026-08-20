@@ -1,0 +1,105 @@
+{
+  "run_name": "baseline_v4",
+  "started_at": "2026-08-20T00:47:24.817981+00:00",
+  "completed_at": "2026-08-20T00:49:16.196303+00:00",
+  "duration_seconds": 111.37923873896943,
+  "duration_human": "1m 51s",
+  "seed": 42,
+  "config_path": "configs/ppo_config_v4.yaml",
+  "config_snapshot_path": "/Users/tobiloba/Documents/warehouse_nav/results/runs/baseline_v4/config_snapshot.yaml",
+  "model_path": "/Users/tobiloba/Documents/warehouse_nav/results/models/baseline_v4.zip",
+  "monitor_path": "/Users/tobiloba/Documents/warehouse_nav/results/runs/baseline_v4/logs/monitor.csv",
+  "logs_dir": "/Users/tobiloba/Documents/warehouse_nav/results/runs/baseline_v4/logs",
+  "training_summary_path": "/Users/tobiloba/Documents/warehouse_nav/results/runs/baseline_v4/training_summary.json",
+  "deterministic_evaluation_path": "/Users/tobiloba/Documents/warehouse_nav/results/runs/baseline_v4/evaluation_deterministic.json",
+  "stochastic_evaluation_path": "/Users/tobiloba/Documents/warehouse_nav/results/runs/baseline_v4/evaluation_stochastic.json",
+  "effective_config": {
+    "env": {
+      "width": 12,
+      "height": 12,
+      "max_steps": 120,
+      "start_pos": [
+        1,
+        6
+      ],
+      "start_heading": 1,
+      "target_pos": [
+        10,
+        6
+      ],
+      "grid_rows": [
+        ". . . . . . . . . . . .",
+        ". . . . . . . . . . . .",
+        ". . . . . . . . . . . .",
+        ". . . . . . . . . . . .",
+        ". . . . # # # # o . . .",
+        ". . . . # # # # . . . .",
+        ". S . . # # # # . . T .",
+        ". . . . # # # # . . . .",
+        ". . . . . . . . o . . .",
+        ". . . . . . . . . . . .",
+        ". . . . . . . . . . . .",
+        ". . . . . . . . . . . ."
+      ]
+    },
+    "reward": {
+      "target": 10.0,
+      "collision": -0.5,
+      "blocked_forward": -0.2,
+      "failed_jump": -1.0,
+      "step_penalty": -0.01
+    },
+    "ppo": {
+      "policy": "MlpPolicy",
+      "total_timesteps": 75000,
+      "learning_rate": 0.0003,
+      "n_steps": 1024,
+      "batch_size": 64,
+      "gamma": 0.99
+    },
+    "eval": {
+      "episodes": 20,
+      "deterministic": true
+    },
+    "run": {
+      "run_name": "baseline_v4",
+      "seed": 42,
+      "tensorboard_enabled": false
+    }
+  },
+  "training_summary": {
+    "episode_count": 3266,
+    "mean_episode_reward": 17.990721962033067,
+    "mean_episode_length": 23.196264543784444,
+    "best_episode_reward": 18.82,
+    "worst_episode_reward": -39.2,
+    "final_10_mean_reward": 18.818,
+    "final_10_mean_length": 18.2,
+    "run_name": "baseline_v4",
+    "timesteps_requested": 75000,
+    "duration_seconds": 111.37923873896943,
+    "duration_human": "1m 51s",
+    "started_at": "2026-08-20T00:47:24.817981+00:00",
+    "completed_at": "2026-08-20T00:49:16.196303+00:00"
+  },
+  "deterministic_evaluation_summary": {
+    "episodes": 20,
+    "success_rate": 1.0,
+    "average_episode_reward": 18.82,
+    "average_steps_per_successful_episode": 18.0,
+    "collision_rate": 0.0,
+    "average_jumps_per_episode": 0.0,
+    "timeout_rate": 0.0,
+    "stuck_rate": 0.0
+  },
+  "stochastic_evaluation_summary": {
+    "episodes": 20,
+    "success_rate": 1.0,
+    "average_episode_reward": 18.798000000000002,
+    "average_steps_per_successful_episode": 20.2,
+    "collision_rate": 0.0,
+    "average_jumps_per_episode": 0.0,
+    "timeout_rate": 0.0,
+    "stuck_rate": 0.0
+  }
+}

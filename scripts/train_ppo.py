@@ -34,7 +34,7 @@ from stable_baselines3 import PPO
 from stable_baselines3.common.monitor import Monitor
 
 from env import WarehouseNavigationEnv
-from env.warehouse_navigation_env import RewardConfig
+from env.warehouse_navigation_env import FREE, LOW_OBSTACLE, WALL, RewardConfig
 from scripts.run_utils import append_jsonl, human_duration, iso_now, load_monitor_summary, write_json
 
 
@@ -85,13 +85,79 @@ def load_config(config_path: Path) -> dict[str, Any]:
         return yaml.safe_load(handle)
 
 
+def parse_grid_rows(env_config: dict[str, Any]) -> dict[str, Any]:
+    """Convert a human-readable grid layout into the numeric map expected by the env."""
+    grid_rows = env_config.pop("grid_rows", None)
+    if grid_rows is None:
+        return env_config
+
+    symbol_to_value = {
+        ".": FREE,
+        "#": WALL,
+        "o": LOW_OBSTACLE,
+        "S": FREE,
+        "T": FREE,
+    }
+    parsed_rows: list[list[int]] = []
+    discovered_starts: list[tuple[int, int]] = []
+    discovered_targets: list[tuple[int, int]] = []
+
+    for y, row in enumerate(grid_rows):
+        cleaned_row = row.replace(" ", "")
+        parsed_row: list[int] = []
+        for x, symbol in enumerate(cleaned_row):
+            if symbol not in symbol_to_value:
+                raise ValueError(
+                    f"Unsupported grid symbol {symbol!r} at row {y}, column {x}. "
+                    "Use only '.', '#', 'o', 'S', or 'T'."
+                )
+            if symbol == "S":
+                discovered_starts.append((x, y))
+            elif symbol == "T":
+                discovered_targets.append((x, y))
+            parsed_row.append(symbol_to_value[symbol])
+        parsed_rows.append(parsed_row)
+
+    env_config["grid"] = parsed_rows
+    if discovered_starts:
+        if "start_positions" not in env_config and "start_pos" not in env_config:
+            env_config["start_positions"] = [list(position) for position in discovered_starts]
+        expected_starts = env_config.get("start_positions", [env_config.get("start_pos")] if "start_pos" in env_config else None)
+        if expected_starts is None:
+            raise ValueError("Could not determine configured start positions.")
+        if [tuple(position) for position in expected_starts] != discovered_starts:
+            raise ValueError("Configured start positions do not match the 'S' markers in grid_rows.")
+
+    if discovered_targets:
+        if "target_positions" not in env_config and "target_pos" not in env_config:
+            env_config["target_positions"] = [list(position) for position in discovered_targets]
+        expected_targets = env_config.get(
+            "target_positions",
+            [env_config.get("target_pos")] if "target_pos" in env_config else None,
+        )
+        if expected_targets is None:
+            raise ValueError("Could not determine configured target positions.")
+        if [tuple(position) for position in expected_targets] != discovered_targets:
+            raise ValueError("Configured target positions do not match the 'T' markers in grid_rows.")
+
+    return env_config
+
+
 def build_env_from_config(config: dict[str, Any]) -> WarehouseNavigationEnv:
     """Create the custom Gymnasium environment from the YAML config."""
     env_config = dict(config["env"])
+    env_config = parse_grid_rows(env_config)
     reward_config = RewardConfig(**config["reward"])
 
     # YAML stores coordinate pairs as lists; the environment expects tuples.
+    if "start_positions" in env_config:
+        env_config["start_positions"] = [tuple(position) for position in env_config["start_positions"]]
+        env_config.setdefault("start_pos", env_config["start_positions"][0])
     env_config["start_pos"] = tuple(env_config["start_pos"])
+
+    if "target_positions" in env_config:
+        env_config["target_positions"] = [tuple(position) for position in env_config["target_positions"]]
+        env_config.setdefault("target_pos", env_config["target_positions"][0])
     env_config["target_pos"] = tuple(env_config["target_pos"])
 
     return WarehouseNavigationEnv(

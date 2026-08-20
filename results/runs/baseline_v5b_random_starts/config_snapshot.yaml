@@ -1,0 +1,41 @@
+env:
+  width: 14
+  height: 12
+  max_steps: 160
+  start_heading: 1
+  target_pos:
+  - 12
+  - 6
+  grid_rows:
+  - . . . . . . . . . . . . . .
+  - '. . # # . . . . . . # # . .'
+  - '. . # . . . . . . . . # . .'
+  - . S . . . . . . . . . . . .
+  - '. . . . # # . . . . # # . .'
+  - '. . . . . # . . . . # . . .'
+  - . S . . . o . . . . o . T .
+  - '. . . . . # . . . . # . . .'
+  - '. . . . # # . . . . # # . .'
+  - . S . . . . . . . . . . . .
+  - '. . # . . . . . . . . # . .'
+  - '. . # # . . . . . . # # . .'
+reward:
+  target: 10.0
+  collision: -0.5
+  blocked_forward: -0.2
+  failed_jump: -1.0
+  step_penalty: -0.01
+ppo:
+  policy: MlpPolicy
+  total_timesteps: 120000
+  learning_rate: 0.0003
+  n_steps: 1024
+  batch_size: 64
+  gamma: 0.99
+eval:
+  episodes: 20
+  deterministic: true
+run:
+  run_name: baseline_v5b_random_starts
+  seed: 42
+  tensorboard_enabled: false

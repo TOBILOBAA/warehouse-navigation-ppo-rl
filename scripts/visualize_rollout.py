@@ -65,6 +65,12 @@ def parse_args() -> argparse.Namespace:
         help="How many episode report folders to generate.",
     )
     parser.add_argument(
+        "--start-episode",
+        type=int,
+        default=1,
+        help="Episode index to start numbering from when saving reports.",
+    )
+    parser.add_argument(
         "--max-steps",
         type=int,
         default=None,
@@ -290,7 +296,8 @@ def build_rollout_summary(rollout: list[dict[str, Any]], mode_name: str) -> dict
 
 
 def save_comparison_figure(
-    env: Any,
+    det_env: Any,
+    stoch_env: Any,
     deterministic_rollout: list[dict[str, Any]],
     stochastic_rollout: list[dict[str, Any]],
     output_path: Path,
@@ -301,14 +308,14 @@ def save_comparison_figure(
     det_path = [tuple(frame["position"]) for frame in deterministic_rollout]
     stoch_path = [tuple(frame["position"]) for frame in stochastic_rollout]
 
-    draw_grid(axes[0], env, det_path, deterministic_rollout[-1]["heading"])
+    draw_grid(axes[0], det_env, det_path, deterministic_rollout[-1]["heading"])
     axes[0].set_title(
         "Deterministic Path\n"
         f"steps={len(deterministic_rollout) - 1}, success={deterministic_rollout[-1]['info']['success']}",
         fontsize=12,
     )
 
-    draw_grid(axes[1], env, stoch_path, stochastic_rollout[-1]["heading"])
+    draw_grid(axes[1], stoch_env, stoch_path, stochastic_rollout[-1]["heading"])
     axes[1].set_title(
         "Stochastic Path\n"
         f"steps={len(stochastic_rollout) - 1}, success={stochastic_rollout[-1]['info']['success']}",
@@ -334,7 +341,7 @@ def save_episode_report(
     stochastic_dir = episode_dir / "stochastic"
     save_frame_visuals(det_env, det_rollout, deterministic_dir, "deterministic")
     save_frame_visuals(stoch_env, stoch_rollout, stochastic_dir, "stochastic")
-    save_comparison_figure(det_env, det_rollout, stoch_rollout, episode_dir / "comparison.png")
+    save_comparison_figure(det_env, stoch_env, det_rollout, stoch_rollout, episode_dir / "comparison.png")
 
     episode_summary = {
         "deterministic": build_rollout_summary(det_rollout, "deterministic"),
@@ -352,7 +359,8 @@ def main() -> None:
     run_output_dir.mkdir(parents=True, exist_ok=True)
 
     manifest: list[dict[str, Any]] = []
-    for episode_index in range(1, args.episodes + 1):
+    end_episode = args.start_episode + args.episodes
+    for episode_index in range(args.start_episode, end_episode):
         det_env = build_env_from_config(config)
         stoch_env = build_env_from_config(config)
         det_rollout = run_rollout(model, det_env, deterministic=True, max_steps=args.max_steps)

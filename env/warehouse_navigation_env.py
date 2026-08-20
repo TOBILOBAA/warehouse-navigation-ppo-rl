@@ -54,6 +54,7 @@ class RewardConfig:
     blocked_forward: float = -0.2
     failed_jump: float = -0.3
     step_penalty: float = -0.01
+    stagnation: float = -0.05
 
 
 class WarehouseNavigationEnv(gym.Env if gym else object):
@@ -67,20 +68,22 @@ class WarehouseNavigationEnv(gym.Env if gym else object):
         height: int = 10,
         max_steps: int = 80,
         start_pos: tuple[int, int] = (1, 5),
+        start_positions: tuple[tuple[int, int], ...] | list[tuple[int, int]] | None = None,
         start_heading: int = 1,
         target_pos: tuple[int, int] = (8, 5),
+        target_positions: tuple[tuple[int, int], ...] | list[tuple[int, int]] | None = None,
         grid: np.ndarray | None = None,
         reward_config: RewardConfig | None = None,
+        stagnation_grace_steps: int = 2,
         render_mode: str | None = "ansi",
     ) -> None:
-        # World definition: map size, start state, target state, and reward rules.
+        # World definition: map size, candidate starts/targets, and reward rules.
         self.width = width
         self.height = height
         self.max_steps = max_steps
-        self.start_pos = start_pos
         self.start_heading = start_heading
-        self.target_pos = target_pos
         self.reward_config = reward_config or RewardConfig()
+        self.stagnation_grace_steps = stagnation_grace_steps
         self.grid = np.array(grid, dtype=np.int8) if grid is not None else self._build_default_grid()
         self.render_mode = render_mode
 
@@ -90,12 +93,23 @@ class WarehouseNavigationEnv(gym.Env if gym else object):
         if self.grid.shape != (self.height, self.width):
             raise ValueError(f"Grid shape {self.grid.shape} does not match {(self.height, self.width)}")
 
+        # These lists define which episode layouts can be sampled at reset time.
+        start_candidates = start_positions if start_positions is not None else [start_pos]
+        target_candidates = target_positions if target_positions is not None else [target_pos]
+        self.start_positions = tuple(tuple(position) for position in start_candidates)
+        self.target_positions = tuple(tuple(position) for position in target_candidates)
+        self._validate_candidate_positions("start_positions", self.start_positions)
+        self._validate_candidate_positions("target_positions", self.target_positions)
+
+        self.start_pos = self.start_positions[0]
+        self.target_pos = self.target_positions[0]
         self.position = self.start_pos
         self.heading = self.start_heading
         self.step_count = 0
         self.episode_reward = 0.0
         self.collision_count = 0
         self.jump_count = 0
+        self.stagnation_steps = 0
 
         if spaces is not None:
             self.action_space = spaces.Discrete(4)
@@ -110,13 +124,16 @@ class WarehouseNavigationEnv(gym.Env if gym else object):
         if gym is not None:
             super().reset(seed=seed)
 
-        # Episode state is reset to the fixed starting configuration.
+        # Each episode can reuse a fixed layout or sample from several valid
+        # start/target positions, depending on the config.
+        self.start_pos, self.target_pos = self._sample_episode_layout()
         self.position = self.start_pos
         self.heading = self.start_heading
         self.step_count = 0
         self.episode_reward = 0.0
         self.collision_count = 0
         self.jump_count = 0
+        self.stagnation_steps = 0
 
         observation = self._get_observation()
         info = self._build_info(success=False, collision=False, blocked=False, failed_jump=False)
@@ -128,6 +145,7 @@ class WarehouseNavigationEnv(gym.Env if gym else object):
             raise ValueError(f"Unsupported action {action}")
 
         # Reward shaping uses change in target distance, so we store the old value first.
+        old_position = self.position
         old_distance = self._distance_to_target(self.position)
         self.step_count += 1
 
@@ -148,9 +166,10 @@ class WarehouseNavigationEnv(gym.Env if gym else object):
             collision, failed_jump, success, event_reward = self._handle_jump()
 
         new_distance = self._distance_to_target(self.position)
+        stagnation_penalty = self._compute_stagnation_penalty(old_position)
         # Reward combines progress, time cost, and any special event on this step.
         progress_reward = old_distance - new_distance
-        reward = progress_reward + self.reward_config.step_penalty + event_reward
+        reward = progress_reward + self.reward_config.step_penalty + event_reward + stagnation_penalty
         self.episode_reward += reward
 
         # terminated = task solved, truncated = action budget exhausted.
@@ -330,8 +349,20 @@ class WarehouseNavigationEnv(gym.Env if gym else object):
             "heading": HEADING_NAMES[self.heading],
             "jump_count": self.jump_count,
             "position": self.position,
+            "stagnation_steps": self.stagnation_steps,
             "success": success,
         }
+
+    def _compute_stagnation_penalty(self, old_position: tuple[int, int]) -> float:
+        """Punish long no-movement streaks so the robot cannot spin in place forever."""
+        if self.position != old_position:
+            self.stagnation_steps = 0
+            return 0.0
+
+        self.stagnation_steps += 1
+        if self.stagnation_steps <= self.stagnation_grace_steps:
+            return 0.0
+        return self.reward_config.stagnation
 
     def _build_default_grid(self) -> np.ndarray:
         """Create the first hand-authored warehouse layout used for debugging."""
@@ -358,3 +389,38 @@ class WarehouseNavigationEnv(gym.Env if gym else object):
             grid[y, x] = LOW_OBSTACLE
 
         return grid
+
+    def _sample_episode_layout(self) -> tuple[tuple[int, int], tuple[int, int]]:
+        """Choose the start and target used for the next episode."""
+        start_pos = self._sample_candidate(self.start_positions)
+        valid_targets = [target for target in self.target_positions if target != start_pos]
+        if not valid_targets:
+            raise ValueError("No valid target positions remain after excluding the sampled start position.")
+        target_pos = self._sample_candidate(tuple(valid_targets))
+        return start_pos, target_pos
+
+    def _sample_candidate(self, candidates: tuple[tuple[int, int], ...]) -> tuple[int, int]:
+        """Sample one candidate position using Gymnasium's RNG when available."""
+        if len(candidates) == 1:
+            return candidates[0]
+
+        if hasattr(self, "np_random"):
+            index = int(self.np_random.integers(len(candidates)))
+        else:  # pragma: no cover - local fallback when gymnasium is unavailable
+            index = int(np.random.default_rng().integers(len(candidates)))
+        return candidates[index]
+
+    def _validate_candidate_positions(
+        self,
+        label: str,
+        candidates: tuple[tuple[int, int], ...],
+    ) -> None:
+        """Reject invalid start/target candidates early so configs fail loudly."""
+        if not candidates:
+            raise ValueError(f"{label} must contain at least one position.")
+
+        for position in candidates:
+            if not self._in_bounds(position):
+                raise ValueError(f"{label} contains out-of-bounds position {position}.")
+            if self._cell_value(position) != FREE:
+                raise ValueError(f"{label} contains non-free position {position}.")

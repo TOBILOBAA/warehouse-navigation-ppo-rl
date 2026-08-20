@@ -1,0 +1,450 @@
+[
+  {
+    "frame_index": 0,
+    "position": [
+      1,
+      6
+    ],
+    "heading": "east",
+    "action_name": null,
+    "reward": null,
+    "info": {
+      "action_budget_remaining": 160,
+      "blocked": false,
+      "collision": false,
+      "distance_to_target": 11.40175425099138,
+      "episode_reward": 0.0,
+      "failed_jump": false,
+      "heading": "east",
+      "jump_count": 0,
+      "position": [
+        1,
+        6
+      ],
+      "stagnation_steps": 0,
+      "success": false
+    },
+    "policy_probs": {
+      "forward": 0.9999998807907104,
+      "turn_left": 7.959230607923473e-09,
+      "turn_right": 3.3650998654266573e-10,
+      "jump": 1.4852120955310966e-07
+    }
+  },
+  {
+    "frame_index": 1,
+    "position": [
+      2,
+      6
+    ],
+    "heading": "east",
+    "action_name": "forward",
+    "reward": 0.9514477420808285,
+    "info": {
+      "action_budget_remaining": 159,
+      "blocked": false,
+      "collision": false,
+      "distance_to_target": 10.44030650891055,
+      "episode_reward": 0.9514477420808285,
+      "failed_jump": false,
+      "heading": "east",
+      "jump_count": 0,
+      "position": [
+        2,
+        6
+      ],
+      "stagnation_steps": 0,
+      "success": false
+    },
+    "policy_probs": {
+      "forward": 0.9999998807907104,
+      "turn_left": 7.959230607923473e-09,
+      "turn_right": 3.3650998654266573e-10,
+      "jump": 1.4852120955310966e-07
+    }
+  },
+  {
+    "frame_index": 2,
+    "position": [
+      3,
+      6
+    ],
+    "heading": "east",
+    "action_name": "forward",
+    "reward": 0.9434735284054125,
+    "info": {
+      "action_budget_remaining": 158,
+      "blocked": false,
+      "collision": false,
+      "distance_to_target": 9.486832980505138,
+      "episode_reward": 1.894921270486241,
+      "failed_jump": false,
+      "heading": "east",
+      "jump_count": 0,
+      "position": [
+        3,
+        6
+      ],
+      "stagnation_steps": 0,
+      "success": false
+    },
+    "policy_probs": {
+      "forward": 0.9999998807907104,
+      "turn_left": 9.501309961024162e-09,
+      "turn_right": 2.9775854004654434e-10,
+      "jump": 1.5396555852476013e-07
+    }
+  },
+  {
+    "frame_index": 3,
+    "position": [
+      4,
+      6
+    ],
+    "heading": "east",
+    "action_name": "forward",
+    "reward": 0.9328292351876077,
+    "info": {
+      "action_budget_remaining": 157,
+      "blocked": false,
+      "collision": false,
+      "distance_to_target": 8.54400374531753,
+      "episode_reward": 2.8277505056738486,
+      "failed_jump": false,
+      "heading": "east",
+      "jump_count": 0,
+      "position": [
+        4,
+        6
+      ],
+      "stagnation_steps": 0,
+      "success": false
+    },
+    "policy_probs": {
+      "forward": 0.9999972581863403,
+      "turn_left": 2.381732656431268e-06,
+      "turn_right": 2.6117760398847167e-08,
+      "jump": 3.140963826808729e-07
+    }
+  },
+  {
+    "frame_index": 4,
+    "position": [
+      6,
+      6
+    ],
+    "heading": "east",
+    "action_name": "jump",
+    "reward": 1.825799812818161,
+    "info": {
+      "action_budget_remaining": 156,
+      "blocked": false,
+      "collision": false,
+      "distance_to_target": 6.708203932499369,
+      "episode_reward": 4.65355031849201,
+      "failed_jump": false,
+      "heading": "east",
+      "jump_count": 1,
+      "position": [
+        6,
+        6
+      ],
+      "stagnation_steps": 0,
+      "success": false
+    },
+    "policy_probs": {
+      "forward": 0.45609763264656067,
+      "turn_left": 0.0011450491147115827,
+      "turn_right": 9.871710972220171e-06,
+      "jump": 0.5427474975585938
+    }
+  },
+  {
+    "frame_index": 5,
+    "position": [
+      7,
+      6
+    ],
+    "heading": "east",
+    "action_name": "forward",
+    "reward": 0.8672520376540687,
+    "info": {
+      "action_budget_remaining": 155,
+      "blocked": false,
+      "collision": false,
+      "distance_to_target": 5.830951894845301,
+      "episode_reward": 5.520802356146079,
+      "failed_jump": false,
+      "heading": "east",
+      "jump_count": 1,
+      "position": [
+        7,
+        6
+      ],
+      "stagnation_steps": 0,
+      "success": false
+    },
+    "policy_probs": {
+      "forward": 0.9999997615814209,
+      "turn_left": 2.5927379354584446e-08,
+      "turn_right": 2.337538773655723e-10,
+      "jump": 2.2755108375349664e-07
+    }
+  },
+  {
+    "frame_index": 6,
+    "position": [
+      8,
+      6
+    ],
+    "heading": "east",
+    "action_name": "forward",
+    "reward": 0.8209518948453007,
+    "info": {
+      "action_budget_remaining": 154,
+      "blocked": false,
+      "collision": false,
+      "distance_to_target": 5.0,
+      "episode_reward": 6.34175425099138,
+      "failed_jump": false,
+      "heading": "east",
+      "jump_count": 1,
+      "position": [
+        8,
+        6
+      ],
+      "stagnation_steps": 0,
+      "success": false
+    },
+    "policy_probs": {
+      "forward": 0.9999997615814209,
+      "turn_left": 3.607640408631596e-08,
+      "turn_right": 2.3415461236631074e-10,
+      "jump": 2.6619380832926254e-07
+    }
+  },
+  {
+    "frame_index": 7,
+    "position": [
+      9,
+      6
+    ],
+    "heading": "east",
+    "action_name": "forward",
+    "reward": 0.7473593128807152,
+    "info": {
+      "action_budget_remaining": 153,
+      "blocked": false,
+      "collision": false,
+      "distance_to_target": 4.242640687119285,
+      "episode_reward": 7.089113563872095,
+      "failed_jump": false,
+      "heading": "east",
+      "jump_count": 1,
+      "position": [
+        9,
+        6
+      ],
+      "stagnation_steps": 0,
+      "success": false
+    },
+    "policy_probs": {
+      "forward": 0.99983811378479,
+      "turn_left": 0.00015985015488695353,
+      "turn_right": 1.1568369018277735e-07,
+      "jump": 1.941707068908727e-06
+    }
+  },
+  {
+    "frame_index": 8,
+    "position": [
+      11,
+      6
+    ],
+    "heading": "east",
+    "action_name": "jump",
+    "reward": 1.0703630269509052,
+    "info": {
+      "action_budget_remaining": 152,
+      "blocked": false,
+      "collision": false,
+      "distance_to_target": 3.1622776601683795,
+      "episode_reward": 8.159476590823001,
+      "failed_jump": false,
+      "heading": "east",
+      "jump_count": 2,
+      "position": [
+        11,
+        6
+      ],
+      "stagnation_steps": 0,
+      "success": false
+    },
+    "policy_probs": {
+      "forward": 0.10120284557342529,
+      "turn_left": 0.02051510103046894,
+      "turn_right": 1.0337002095184289e-05,
+      "jump": 0.8782716393470764
+    }
+  },
+  {
+    "frame_index": 9,
+    "position": [
+      12,
+      6
+    ],
+    "heading": "east",
+    "action_name": "forward",
+    "reward": 0.15227766016837951,
+    "info": {
+      "action_budget_remaining": 151,
+      "blocked": false,
+      "collision": false,
+      "distance_to_target": 3.0,
+      "episode_reward": 8.311754250991381,
+      "failed_jump": false,
+      "heading": "east",
+      "jump_count": 2,
+      "position": [
+        12,
+        6
+      ],
+      "stagnation_steps": 0,
+      "success": false
+    },
+    "policy_probs": {
+      "forward": 0.9999994039535522,
+      "turn_left": 1.5148815180054953e-07,
+      "turn_right": 2.7605778774031364e-10,
+      "jump": 4.919749585496902e-07
+    }
+  },
+  {
+    "frame_index": 10,
+    "position": [
+      12,
+      6
+    ],
+    "heading": "north",
+    "action_name": "turn_left",
+    "reward": -0.01,
+    "info": {
+      "action_budget_remaining": 150,
+      "blocked": false,
+      "collision": false,
+      "distance_to_target": 3.0,
+      "episode_reward": 8.301754250991381,
+      "failed_jump": false,
+      "heading": "north",
+      "jump_count": 2,
+      "position": [
+        12,
+        6
+      ],
+      "stagnation_steps": 1,
+      "success": false
+    },
+    "policy_probs": {
+      "forward": 0.0001778833830030635,
+      "turn_left": 0.9996242523193359,
+      "turn_right": 0.00019675743533298373,
+      "jump": 1.087811710931419e-06
+    }
+  },
+  {
+    "frame_index": 11,
+    "position": [
+      12,
+      5
+    ],
+    "heading": "north",
+    "action_name": "forward",
+    "reward": 0.99,
+    "info": {
+      "action_budget_remaining": 149,
+      "blocked": false,
+      "collision": false,
+      "distance_to_target": 2.0,
+      "episode_reward": 9.291754250991382,
+      "failed_jump": false,
+      "heading": "north",
+      "jump_count": 2,
+      "position": [
+        12,
+        5
+      ],
+      "stagnation_steps": 0,
+      "success": false
+    },
+    "policy_probs": {
+      "forward": 0.9965292811393738,
+      "turn_left": 5.9149140724912286e-05,
+      "turn_right": 0.003405931405723095,
+      "jump": 5.580484412348596e-06
+    }
+  },
+  {
+    "frame_index": 12,
+    "position": [
+      12,
+      4
+    ],
+    "heading": "north",
+    "action_name": "forward",
+    "reward": 0.99,
+    "info": {
+      "action_budget_remaining": 148,
+      "blocked": false,
+      "collision": false,
+      "distance_to_target": 1.0,
+      "episode_reward": 10.281754250991382,
+      "failed_jump": false,
+      "heading": "north",
+      "jump_count": 2,
+      "position": [
+        12,
+        4
+      ],
+      "stagnation_steps": 0,
+      "success": false
+    },
+    "policy_probs": {
+      "forward": 0.9999881982803345,
+      "turn_left": 6.09026429287951e-08,
+      "turn_right": 2.627351250339416e-06,
+      "jump": 9.106206562137231e-06
+    }
+  },
+  {
+    "frame_index": 13,
+    "position": [
+      12,
+      3
+    ],
+    "heading": "north",
+    "action_name": "forward",
+    "reward": 10.99,
+    "info": {
+      "action_budget_remaining": 147,
+      "blocked": false,
+      "collision": false,
+      "distance_to_target": 0.0,
+      "episode_reward": 21.271754250991382,
+      "failed_jump": false,
+      "heading": "north",
+      "jump_count": 2,
+      "position": [
+        12,
+        3
+      ],
+      "stagnation_steps": 0,
+      "success": true
+    },
+    "policy_probs": {
+      "forward": 0.9961410164833069,
+      "turn_left": 7.788992206769763e-07,
+      "turn_right": 0.0038576130755245686,
+      "jump": 5.565204332924623e-07
+    }
+  }
+]

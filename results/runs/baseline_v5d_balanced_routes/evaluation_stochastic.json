@@ -1,0 +1,294 @@
+{
+  "summary": {
+    "episodes": 20,
+    "success_rate": 0.9,
+    "average_episode_reward": 20.533549024320372,
+    "average_steps_per_successful_episode": 70.16666666666667,
+    "collision_rate": 0.0,
+    "average_jumps_per_episode": 0.15,
+    "timeout_rate": 0.1,
+    "stuck_rate": 0.1
+  },
+  "episodes": [
+    {
+      "episode_index": 0,
+      "success": true,
+      "steps": 65,
+      "episode_reward": 22.35000000000001,
+      "collision_events": 0,
+      "jump_count": 0,
+      "final_position": [
+        14,
+        6
+      ],
+      "terminated": true,
+      "truncated": false
+    },
+    {
+      "episode_index": 1,
+      "success": true,
+      "steps": 78,
+      "episode_reward": 21.220000000000013,
+      "collision_events": 0,
+      "jump_count": 1,
+      "final_position": [
+        14,
+        6
+      ],
+      "terminated": true,
+      "truncated": false
+    },
+    {
+      "episode_index": 2,
+      "success": true,
+      "steps": 77,
+      "episode_reward": 22.23000000000001,
+      "collision_events": 0,
+      "jump_count": 0,
+      "final_position": [
+        14,
+        6
+      ],
+      "terminated": true,
+      "truncated": false
+    },
+    {
+      "episode_index": 3,
+      "success": true,
+      "steps": 27,
+      "episode_reward": 22.730000000000004,
+      "collision_events": 0,
+      "jump_count": 0,
+      "final_position": [
+        14,
+        6
+      ],
+      "terminated": true,
+      "truncated": false
+    },
+    {
+      "episode_index": 4,
+      "success": true,
+      "steps": 77,
+      "episode_reward": 22.230000000000008,
+      "collision_events": 0,
+      "jump_count": 0,
+      "final_position": [
+        14,
+        6
+      ],
+      "terminated": true,
+      "truncated": false
+    },
+    {
+      "episode_index": 5,
+      "success": true,
+      "steps": 125,
+      "episode_reward": 21.75000000000002,
+      "collision_events": 0,
+      "jump_count": 0,
+      "final_position": [
+        14,
+        6
+      ],
+      "terminated": true,
+      "truncated": false
+    },
+    {
+      "episode_index": 6,
+      "success": false,
+      "steps": 180,
+      "episode_reward": 6.100980486407251,
+      "collision_events": 0,
+      "jump_count": 0,
+      "final_position": [
+        9,
+        7
+      ],
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "episode_index": 7,
+      "success": true,
+      "steps": 173,
+      "episode_reward": 21.27000000000003,
+      "collision_events": 0,
+      "jump_count": 0,
+      "final_position": [
+        14,
+        6
+      ],
+      "terminated": true,
+      "truncated": false
+    },
+    {
+      "episode_index": 8,
+      "success": true,
+      "steps": 51,
+      "episode_reward": 22.490000000000006,
+      "collision_events": 0,
+      "jump_count": 0,
+      "final_position": [
+        14,
+        6
+      ],
+      "terminated": true,
+      "truncated": false
+    },
+    {
+      "episode_index": 9,
+      "success": true,
+      "steps": 92,
+      "episode_reward": 21.080000000000016,
+      "collision_events": 0,
+      "jump_count": 1,
+      "final_position": [
+        14,
+        6
+      ],
+      "terminated": true,
+      "truncated": false
+    },
+    {
+      "episode_index": 10,
+      "success": true,
+      "steps": 59,
+      "episode_reward": 22.410000000000007,
+      "collision_events": 0,
+      "jump_count": 0,
+      "final_position": [
+        14,
+        6
+      ],
+      "terminated": true,
+      "truncated": false
+    },
+    {
+      "episode_index": 11,
+      "success": true,
+      "steps": 35,
+      "episode_reward": 22.650000000000006,
+      "collision_events": 0,
+      "jump_count": 0,
+      "final_position": [
+        14,
+        6
+      ],
+      "terminated": true,
+      "truncated": false
+    },
+    {
+      "episode_index": 12,
+      "success": true,
+      "steps": 32,
+      "episode_reward": 22.680000000000003,
+      "collision_events": 0,
+      "jump_count": 0,
+      "final_position": [
+        14,
+        6
+      ],
+      "terminated": true,
+      "truncated": false
+    },
+    {
+      "episode_index": 13,
+      "success": true,
+      "steps": 37,
+      "episode_reward": 22.630000000000006,
+      "collision_events": 0,
+      "jump_count": 0,
+      "final_position": [
+        14,
+        6
+      ],
+      "terminated": true,
+      "truncated": false
+    },
+    {
+      "episode_index": 14,
+      "success": true,
+      "steps": 43,
+      "episode_reward": 22.570000000000007,
+      "collision_events": 0,
+      "jump_count": 0,
+      "final_position": [
+        14,
+        6
+      ],
+      "terminated": true,
+      "truncated": false
+    },
+    {
+      "episode_index": 15,
+      "success": true,
+      "steps": 34,
+      "episode_reward": 22.660000000000004,
+      "collision_events": 0,
+      "jump_count": 0,
+      "final_position": [
+        14,
+        6
+      ],
+      "terminated": true,
+      "truncated": false
+    },
+    {
+      "episode_index": 16,
+      "success": false,
+      "steps": 180,
+      "episode_reward": 6.200000000000035,
+      "collision_events": 0,
+      "jump_count": 0,
+      "final_position": [
+        11,
+        10
+      ],
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "episode_index": 17,
+      "success": true,
+      "steps": 33,
+      "episode_reward": 22.670000000000005,
+      "collision_events": 0,
+      "jump_count": 0,
+      "final_position": [
+        14,
+        6
+      ],
+      "terminated": true,
+      "truncated": false
+    },
+    {
+      "episode_index": 18,
+      "success": true,
+      "steps": 103,
+      "episode_reward": 21.97000000000002,
+      "collision_events": 0,
+      "jump_count": 0,
+      "final_position": [
+        14,
+        6
+      ],
+      "terminated": true,
+      "truncated": false
+    },
+    {
+      "episode_index": 19,
+      "success": true,
+      "steps": 122,
+      "episode_reward": 20.780000000000022,
+      "collision_events": 0,
+      "jump_count": 1,
+      "final_position": [
+        14,
+        6
+      ],
+      "terminated": true,
+      "truncated": false
+    }
+  ]
+}

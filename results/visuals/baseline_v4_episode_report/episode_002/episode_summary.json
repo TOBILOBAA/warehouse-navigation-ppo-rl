@@ -1,0 +1,30 @@
+{
+  "deterministic": {
+    "mode": "deterministic",
+    "frame_count": 19,
+    "steps": 18,
+    "success": true,
+    "final_position": [
+      10,
+      6
+    ],
+    "final_heading": "north",
+    "total_reward": 18.82,
+    "jump_count": 0,
+    "distance_to_target": 0.0
+  },
+  "stochastic": {
+    "mode": "stochastic",
+    "frame_count": 25,
+    "steps": 24,
+    "success": true,
+    "final_position": [
+      10,
+      6
+    ],
+    "final_heading": "north",
+    "total_reward": 18.76,
+    "jump_count": 0,
+    "distance_to_target": 0.0
+  }
+}
